@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-DynamicScheduler-DynamicSchedulerUITests/Pods-DynamicScheduler-DynamicSchedulerUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CalendarKit/CalendarKit.framework
+${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework
+${BUILT_PRODUCTS_DIR}/Neon/Neon.framework

@@ -1,0 +1,6 @@
+framework module Pods_DynamicScheduler {
+  umbrella header "Pods-DynamicScheduler-umbrella.h"
+
+  export *
+  module * { export * }
+}
