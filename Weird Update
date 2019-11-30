@@ -1,0 +1,44 @@
+func addTestData() {
+        var managedObjectContext: NSManagedObjectContext
+        managedObjectContext = persistentContainer.viewContext
+        guard let entityProj1 = NSEntityDescription.entity(forEntityName: "Project", in: managedObjectContext) else{
+            fatalError("Could not find entity description")
+        }
+        entityProj1.setValue("Basic Algorithms", forKey: "name")
+        guard let entityProj2 = NSEntityDescription.entity(forEntityName: "Project", in: managedObjectContext) else {
+            fatalError("Could not find entity description")
+        }
+        entityProj2.setValue("IOS Programming", forKey: "name")
+        guard let entityProj3 = NSEntityDescription.entity(forEntityName: "Project", in: managedObjectContext) else{
+            fatalError("Could not find entity description")
+        }
+        entityProj3.setValue("SocioLingusitics", forKey: "name")
+        guard let entityProj4 = NSEntityDescription.entity(forEntityName: "Project", in: managedObjectContext) else{
+            fatalError("Could not find entity description")
+        }
+        entityProj4.setValue("How Things Work", forKey: "name")
+        guard let entity = NSEntityDescription.entity(forEntityName: "Task", in: managedObjectContext) else{
+            fatalError("Could not find entity description")
+        }
+        
+        for i in 1...16 {
+            if(i < 5){
+                let task = NSManagedObject(entity: entity, insertInto: managedObjectContext)
+                task.setValue("Test", forKey: "name")
+                task.setValue(i, forKey: "estimated_time")
+            }
+            else if(i < 9){
+                let task = NSManagedObject(entity: entity, insertInto: managedObjectContext)
+                task.setValue("Test", forKey: "name")
+                task.setValue(i, forKey: "estimated_time")            }
+            else if(i < 13){
+                let task = NSManagedObject(entity: entity, insertInto: managedObjectContext)
+                task.setValue("Test", forKey: "name")
+                task.setValue(i, forKey: "estimated_time")                }
+            else{
+                let task = NSManagedObject(entity: entity, insertInto: managedObjectContext)
+                task.setValue("Test", forKey: "name")
+                task.setValue(i, forKey: "estimated_time")                }
+        }
+        
+    }
