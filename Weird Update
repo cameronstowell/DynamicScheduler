@@ -1,3 +1,5 @@
+Had Some weird errors... some having I think to do with that code gen problem you were talking about (even pulling just your code and then generating my own with manual/none its still having tons of problem with the generated code, and it looks like its making the object properties and object class variants.) also it says UIScene hasn't been declared... Dunno.  Ill probably start with a fresh pull tomorrow and that'll hopefully fix my UIScene problems, otherwise ill ask for more details on how you fixed the codegen thing.  In the mean time, the code there should hard code some project and task objects.  Didn't get nearly as much done as I wanted to here, sorry about that.
+Im sure there was a better way t do this but ive been woprking for a while and im tired DONT JUDGE ME
 func addTestData() {
         var managedObjectContext: NSManagedObjectContext
         managedObjectContext = persistentContainer.viewContext
