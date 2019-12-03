@@ -27,6 +27,19 @@ class ViewController: DayViewController {
         dayView.autoScrollToFirstEvent = true
         reloadData()
         
+        //Alerts user if first time launching app to ask to import their iOS calendar
+        if !(UserDefaults.standard.bool(forKey: "launchedBefore")){
+            let alert = UIAlertController(title: "Import Your iOS Calendar", message: "This is an alert.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "Default action"), style: .default, handler: { _ in
+            print("No calendar import requested")
+            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Default action"), style: .default, handler: { _ in
+            print("Import requested.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
         //adds test data
         var managedObjectContext: NSManagedObjectContext
         managedObjectContext = container.viewContext
