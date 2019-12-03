@@ -26,10 +26,10 @@ extension Constraint {
 extension Constraint {
 
     @objc(addEventsObject:)
-    @NSManaged public func addToEvents(_ value: EventData)
+    @NSManaged public func addToEvents(_ value: Event)
 
     @objc(removeEventsObject:)
-    @NSManaged public func removeFromEvents(_ value: EventData)
+    @NSManaged public func removeFromEvents(_ value: Event)
 
     @objc(addEvents:)
     @NSManaged public func addToEvents(_ values: NSSet)

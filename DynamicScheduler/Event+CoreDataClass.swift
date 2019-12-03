@@ -1,5 +1,5 @@
 //
-//  Task+CoreDataClass.swift
+//  Event+CoreDataClass.swift
 //  DynamicScheduler
 //
 //  Created by Cameron Stowell on 12/2/19.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class Task: NSManagedObject {
+public class Event: NSManagedObject {
 
 }
