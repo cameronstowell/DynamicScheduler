@@ -20,13 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController(nibName: nil, bundle: nil)
-        
-        if let rootVC = window?.rootViewController as? ViewController {
-            rootVC.container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
-        }
-        
         window?.makeKeyAndVisible()
+        
+        let dayViewController = ViewController()
+        let navigationController = UINavigationController(rootViewController: dayViewController)
+        window?.rootViewController = navigationController
+        
+        dayViewController.container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

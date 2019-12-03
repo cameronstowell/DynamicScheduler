@@ -7,18 +7,25 @@
 //  The main calendar screen
 
 import UIKit
+import Neon
 import CalendarKit
 import CoreData
 
 class ViewController: DayViewController {
     
     var container: NSPersistentContainer!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard container != nil else {
             fatalError("This view needs a persistent container.")
         }
+        
+        title = "Dynamic Scheduler"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Dark", style: .done, target: self, action: .none)
+        navigationController?.navigationBar.isTranslucent = false
+        dayView.autoScrollToFirstEvent = true
+        reloadData()
         
         //adds test data
         var managedObjectContext: NSManagedObjectContext
@@ -90,7 +97,6 @@ class ViewController: DayViewController {
         // Get today's beginning & end
         let dateFrom = calendar.startOfDay(for: date) // eg. 2016-10-10 00:00:00
         let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
-
 
         // Set predicate as date being today's date
         let fromPredicate = NSPredicate(format: "startDate >= %@", dateFrom as NSDate)
