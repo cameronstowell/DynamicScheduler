@@ -1,3 +1,5 @@
+OOOOOK finally about done with a good chunk of this.  Got multiple tables with tasks.  go to projects and tasks to view projects.  From there you can either add projects, or add tasks to existing projects by tapping a project.  That will take you to a list of existing tasks for that project.  From there you can add tasks under that project, with all the necessary values.  From here i still have to make a task detail view when you tap individual tasks.  From the initial controller it should also take you to a generic task viewer that has all tasks, but I'm having a really weird problem where the managed object context i push from the segue is null by the time i use it for the fetch request (I copied it almost directly from the other fetch requests so i have no idea what's wrong...)  As for integrating it with the calendar page, I made the temp root controller with the hope it'd be easy to replace.  All that needs to be done is have the calendar page there, have the calendar make the persistent container, and have it send the managedObjectContext to both the projectView and the Generic Task View.
+
 Project
 "A collection of tasks"
 
