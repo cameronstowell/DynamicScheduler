@@ -2,6 +2,24 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Project+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Project+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Constraint+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Constraint+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Task+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Task+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:DynamicScheduler.xcodeproj">
    </FileRef>
    <FileRef
