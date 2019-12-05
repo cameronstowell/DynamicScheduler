@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         
-        let dayViewController = ViewController()
+        let dayViewController = CalendarViewController()
         let navigationController = UINavigationController(rootViewController: dayViewController)
         window?.rootViewController = navigationController
         
