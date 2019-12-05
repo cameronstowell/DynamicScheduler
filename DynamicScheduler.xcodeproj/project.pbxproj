@@ -3,17 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2E3816DE3429FB2C28B9DFBE /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDFB39104F793C3E5D69A15 /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework */; };
 		4195BBE34EF6669AD36A2367 /* Pods_DynamicScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46C885B614AFB8798DA6870 /* Pods_DynamicScheduler.framework */; };
+		C0232441239967FA00D84B3F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0232440239967FA00D84B3F /* CalendarViewController.swift */; };
+		C02324442399680900D84B3F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C02324422399680900D84B3F /* Model.xcdatamodeld */; };
+		C02324492399688E00D84B3F /* EventData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324452399688E00D84B3F /* EventData+CoreDataProperties.swift */; };
+		C023244A2399688E00D84B3F /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324462399688E00D84B3F /* Task+CoreDataClass.swift */; };
+		C023244B2399688E00D84B3F /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324472399688E00D84B3F /* Task+CoreDataProperties.swift */; };
+		C023244C2399688E00D84B3F /* EventData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324482399688E00D84B3F /* EventData+CoreDataClass.swift */; };
+		C023244F2399689600D84B3F /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023244D2399689600D84B3F /* Project+CoreDataClass.swift */; };
+		C02324502399689600D84B3F /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023244E2399689600D84B3F /* Project+CoreDataProperties.swift */; };
+		C02324532399689B00D84B3F /* Constraint+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324512399689B00D84B3F /* Constraint+CoreDataClass.swift */; };
+		C02324542399689B00D84B3F /* Constraint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324522399689B00D84B3F /* Constraint+CoreDataProperties.swift */; };
 		C07D31FA23885D180087368D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31F923885D180087368D /* AppDelegate.swift */; };
 		C07D31FC23885D180087368D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31FB23885D180087368D /* SceneDelegate.swift */; };
-		C07D31FE23885D180087368D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31FD23885D180087368D /* ViewController.swift */; };
 		C07D320123885D180087368D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07D31FF23885D180087368D /* Main.storyboard */; };
-		C07D320423885D180087368D /* DynamicScheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C07D320223885D180087368D /* DynamicScheduler.xcdatamodeld */; };
 		C07D320623885D180087368D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07D320523885D180087368D /* Assets.xcassets */; };
 		C07D320923885D180087368D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07D320723885D180087368D /* LaunchScreen.storyboard */; };
 		C07D321423885D180087368D /* DynamicSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D321323885D180087368D /* DynamicSchedulerTests.swift */; };
@@ -47,12 +55,20 @@
 		859CA5D15611529E5281EB28 /* Pods-DynamicSchedulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicSchedulerTests.release.xcconfig"; path = "Target Support Files/Pods-DynamicSchedulerTests/Pods-DynamicSchedulerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8CFB9C0EFF41E46387845083 /* Pods-DynamicScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicScheduler.release.xcconfig"; path = "Target Support Files/Pods-DynamicScheduler/Pods-DynamicScheduler.release.xcconfig"; sourceTree = "<group>"; };
 		AFDFB39104F793C3E5D69A15 /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicScheduler_DynamicSchedulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0232440239967FA00D84B3F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C02324432399680900D84B3F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C02324452399688E00D84B3F /* EventData+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C02324462399688E00D84B3F /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C02324472399688E00D84B3F /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C02324482399688E00D84B3F /* EventData+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C023244D2399689600D84B3F /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C023244E2399689600D84B3F /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C02324512399689B00D84B3F /* Constraint+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constraint+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C02324522399689B00D84B3F /* Constraint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constraint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C07D31F623885D180087368D /* DynamicScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07D31F923885D180087368D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07D31FB23885D180087368D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C07D31FD23885D180087368D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C07D320023885D180087368D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C07D320323885D180087368D /* DynamicScheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DynamicScheduler.xcdatamodel; sourceTree = "<group>"; };
 		C07D320523885D180087368D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C07D320823885D180087368D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C07D320A23885D180087368D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +122,14 @@
 		C07D31ED23885D180087368D = {
 			isa = PBXGroup;
 			children = (
+				C02324482399688E00D84B3F /* EventData+CoreDataClass.swift */,
+				C02324452399688E00D84B3F /* EventData+CoreDataProperties.swift */,
+				C02324462399688E00D84B3F /* Task+CoreDataClass.swift */,
+				C02324472399688E00D84B3F /* Task+CoreDataProperties.swift */,
+				C023244D2399689600D84B3F /* Project+CoreDataClass.swift */,
+				C023244E2399689600D84B3F /* Project+CoreDataProperties.swift */,
+				C02324512399689B00D84B3F /* Constraint+CoreDataClass.swift */,
+				C02324522399689B00D84B3F /* Constraint+CoreDataProperties.swift */,
 				C07D31F823885D180087368D /* DynamicScheduler */,
 				C07D321223885D180087368D /* DynamicSchedulerTests */,
 				C07D321D23885D190087368D /* DynamicSchedulerUITests */,
@@ -128,14 +152,14 @@
 		C07D31F823885D180087368D /* DynamicScheduler */ = {
 			isa = PBXGroup;
 			children = (
+				C02324422399680900D84B3F /* Model.xcdatamodeld */,
+				C0232440239967FA00D84B3F /* CalendarViewController.swift */,
 				C07D31F923885D180087368D /* AppDelegate.swift */,
 				C07D31FB23885D180087368D /* SceneDelegate.swift */,
-				C07D31FD23885D180087368D /* ViewController.swift */,
 				C07D31FF23885D180087368D /* Main.storyboard */,
 				C07D320523885D180087368D /* Assets.xcassets */,
 				C07D320723885D180087368D /* LaunchScreen.storyboard */,
 				C07D320A23885D180087368D /* Info.plist */,
-				C07D320223885D180087368D /* DynamicScheduler.xcdatamodeld */,
 			);
 			path = DynamicScheduler;
 			sourceTree = "<group>";
@@ -168,7 +192,6 @@
 				2455AD3BCE97D5139D759736 /* Pods-DynamicSchedulerTests.debug.xcconfig */,
 				859CA5D15611529E5281EB28 /* Pods-DynamicSchedulerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -411,10 +434,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07D31FE23885D180087368D /* ViewController.swift in Sources */,
-				C07D320423885D180087368D /* DynamicScheduler.xcdatamodeld in Sources */,
+				C02324532399689B00D84B3F /* Constraint+CoreDataClass.swift in Sources */,
+				C023244C2399688E00D84B3F /* EventData+CoreDataClass.swift in Sources */,
+				C02324442399680900D84B3F /* Model.xcdatamodeld in Sources */,
+				C02324502399689600D84B3F /* Project+CoreDataProperties.swift in Sources */,
+				C0232441239967FA00D84B3F /* CalendarViewController.swift in Sources */,
+				C023244F2399689600D84B3F /* Project+CoreDataClass.swift in Sources */,
+				C02324542399689B00D84B3F /* Constraint+CoreDataProperties.swift in Sources */,
 				C07D31FA23885D180087368D /* AppDelegate.swift in Sources */,
 				C07D31FC23885D180087368D /* SceneDelegate.swift in Sources */,
+				C023244B2399688E00D84B3F /* Task+CoreDataProperties.swift in Sources */,
+				C023244A2399688E00D84B3F /* Task+CoreDataClass.swift in Sources */,
+				C02324492399688E00D84B3F /* EventData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,13 +776,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C07D320223885D180087368D /* DynamicScheduler.xcdatamodeld */ = {
+		C02324422399680900D84B3F /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C07D320323885D180087368D /* DynamicScheduler.xcdatamodel */,
+				C02324432399680900D84B3F /* Model.xcdatamodel */,
 			);
-			currentVersion = C07D320323885D180087368D /* DynamicScheduler.xcdatamodel */;
-			path = DynamicScheduler.xcdatamodeld;
+			currentVersion = C02324432399680900D84B3F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
