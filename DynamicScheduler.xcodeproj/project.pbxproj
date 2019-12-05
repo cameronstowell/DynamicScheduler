@@ -20,7 +20,6 @@
 		B961D6DA2398DE0700694967 /* GenericTaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961D6D92398DE0700694967 /* GenericTaskViewCell.swift */; };
 		C023245A23996F7600D84B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023245923996F7600D84B3F /* SceneDelegate.swift */; };
 		C023245F2399702E00D84B3F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023245E2399702D00D84B3F /* CalendarViewController.swift */; };
-		C02324622399705100D84B3F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C02324602399705100D84B3F /* Model.xcdatamodeld */; };
 		C023246B2399709600D84B3F /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324632399709600D84B3F /* Project+CoreDataClass.swift */; };
 		C023246C2399709600D84B3F /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324642399709600D84B3F /* Project+CoreDataProperties.swift */; };
 		C023246D2399709600D84B3F /* EventData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324652399709600D84B3F /* EventData+CoreDataClass.swift */; };
@@ -30,6 +29,7 @@
 		C02324712399709600D84B3F /* Constraint+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324692399709600D84B3F /* Constraint+CoreDataClass.swift */; };
 		C02324722399709600D84B3F /* Constraint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023246A2399709600D84B3F /* Constraint+CoreDataProperties.swift */; };
 		C02324742399714C00D84B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324732399714C00D84B3F /* AppDelegate.swift */; };
+		C02324802399759900D84B3F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C023247E2399759900D84B3F /* Model.xcdatamodeld */; };
 		C07D31FE23885D180087368D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31FD23885D180087368D /* ViewController.swift */; };
 		C07D320123885D180087368D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07D31FF23885D180087368D /* Main.storyboard */; };
 		C07D320623885D180087368D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07D320523885D180087368D /* Assets.xcassets */; };
@@ -76,7 +76,6 @@
 		B961D6D92398DE0700694967 /* GenericTaskViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTaskViewCell.swift; sourceTree = "<group>"; };
 		C023245923996F7600D84B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C023245E2399702D00D84B3F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		C02324612399705100D84B3F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C02324632399709600D84B3F /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C02324642399709600D84B3F /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C02324652399709600D84B3F /* EventData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventData+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		C02324692399709600D84B3F /* Constraint+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraint+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C023246A2399709600D84B3F /* Constraint+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C02324732399714C00D84B3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C023247F2399759900D84B3F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C07D31F623885D180087368D /* DynamicScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07D31FD23885D180087368D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C07D320023885D180087368D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,11 +172,11 @@
 		C07D31F823885D180087368D /* DynamicScheduler */ = {
 			isa = PBXGroup;
 			children = (
+				C023247E2399759900D84B3F /* Model.xcdatamodeld */,
 				C023245923996F7600D84B3F /* SceneDelegate.swift */,
 				C02324732399714C00D84B3F /* AppDelegate.swift */,
 				C07D31FD23885D180087368D /* ViewController.swift */,
 				C07D31FF23885D180087368D /* Main.storyboard */,
-				C02324602399705100D84B3F /* Model.xcdatamodeld */,
 				B961D6D72398C61400694967 /* GenericTaskViewController.swift */,
 				B961D6D52398A79A00694967 /* TempRootViewController.swift */,
 				C023245E2399702D00D84B3F /* CalendarViewController.swift */,
@@ -473,10 +473,10 @@
 				B961D6DA2398DE0700694967 /* GenericTaskViewCell.swift in Sources */,
 				B961D6D82398C61400694967 /* GenericTaskViewController.swift in Sources */,
 				B90A3B57239519A000563776 /* TableViewCell.swift in Sources */,
+				C02324802399759900D84B3F /* Model.xcdatamodeld in Sources */,
 				B90A3B502394BEB300563776 /* AddProjectViewController.swift in Sources */,
 				B90A3B522394FA8600563776 /* ProjectTasksViewController.swift in Sources */,
 				C023246F2399709600D84B3F /* Task+CoreDataClass.swift in Sources */,
-				C02324622399705100D84B3F /* Model.xcdatamodeld in Sources */,
 				C07D31FE23885D180087368D /* ViewController.swift in Sources */,
 				C023246E2399709600D84B3F /* EventData+CoreDataProperties.swift in Sources */,
 				C023246B2399709600D84B3F /* Project+CoreDataClass.swift in Sources */,
@@ -818,14 +818,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C02324602399705100D84B3F /* Model.xcdatamodeld */ = {
+		C023247E2399759900D84B3F /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C02324612399705100D84B3F /* Model.xcdatamodel */,
+				C023247F2399759900D84B3F /* Model.xcdatamodel */,
 			);
-			currentVersion = C02324612399705100D84B3F /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = "../../noah merge/Model.xcdatamodeld";
+			currentVersion = C023247F2399759900D84B3F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
