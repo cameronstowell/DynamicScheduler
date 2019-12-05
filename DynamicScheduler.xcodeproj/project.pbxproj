@@ -3,17 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2E3816DE3429FB2C28B9DFBE /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDFB39104F793C3E5D69A15 /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework */; };
 		4195BBE34EF6669AD36A2367 /* Pods_DynamicScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46C885B614AFB8798DA6870 /* Pods_DynamicScheduler.framework */; };
+		B90A3B3C2394890D00563776 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B3A2394890D00563776 /* Model.xcdatamodeld */; };
+		B90A3B4323948EA900563776 /* Constraint+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B3D23948EA800563776 /* Constraint+CoreDataClass copy.swift */; };
+		B90A3B4423948EA900563776 /* Project+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B3E23948EA800563776 /* Project+CoreDataProperties copy.swift */; };
+		B90A3B4523948EA900563776 /* Project+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B3F23948EA800563776 /* Project+CoreDataClass copy.swift */; };
+		B90A3B4623948EA900563776 /* Constraint+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4023948EA900563776 /* Constraint+CoreDataProperties copy.swift */; };
+		B90A3B4723948EA900563776 /* Task+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4123948EA900563776 /* Task+CoreDataClass copy.swift */; };
+		B90A3B4823948EA900563776 /* Task+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4223948EA900563776 /* Task+CoreDataProperties copy.swift */; };
+		B90A3B4C2394969D00563776 /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4B2394969D00563776 /* ProjectTableViewController.swift */; };
+		B90A3B502394BEB300563776 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4F2394BEB300563776 /* AddProjectViewController.swift */; };
+		B90A3B522394FA8600563776 /* ProjectTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B512394FA8600563776 /* ProjectTasksViewController.swift */; };
+		B90A3B54239503A800563776 /* ProjectTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B53239503A800563776 /* ProjectTaskCell.swift */; };
+		B90A3B5623950C0A00563776 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B5523950C0A00563776 /* AddTaskViewController.swift */; };
+		B90A3B57239519A000563776 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4D2394A18A00563776 /* TableViewCell.swift */; };
+		B961D6D62398A79A00694967 /* TempRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961D6D52398A79A00694967 /* TempRootViewController.swift */; };
+		B961D6D82398C61400694967 /* GenericTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961D6D72398C61400694967 /* GenericTaskViewController.swift */; };
+		B961D6DA2398DE0700694967 /* GenericTaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961D6D92398DE0700694967 /* GenericTaskViewCell.swift */; };
 		C07D31FA23885D180087368D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31F923885D180087368D /* AppDelegate.swift */; };
-		C07D31FC23885D180087368D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31FB23885D180087368D /* SceneDelegate.swift */; };
 		C07D31FE23885D180087368D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31FD23885D180087368D /* ViewController.swift */; };
 		C07D320123885D180087368D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07D31FF23885D180087368D /* Main.storyboard */; };
-		C07D320423885D180087368D /* DynamicScheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C07D320223885D180087368D /* DynamicScheduler.xcdatamodeld */; };
 		C07D320623885D180087368D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07D320523885D180087368D /* Assets.xcassets */; };
 		C07D320923885D180087368D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07D320723885D180087368D /* LaunchScreen.storyboard */; };
 		C07D321423885D180087368D /* DynamicSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D321323885D180087368D /* DynamicSchedulerTests.swift */; };
@@ -47,12 +61,26 @@
 		859CA5D15611529E5281EB28 /* Pods-DynamicSchedulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicSchedulerTests.release.xcconfig"; path = "Target Support Files/Pods-DynamicSchedulerTests/Pods-DynamicSchedulerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8CFB9C0EFF41E46387845083 /* Pods-DynamicScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicScheduler.release.xcconfig"; path = "Target Support Files/Pods-DynamicScheduler/Pods-DynamicScheduler.release.xcconfig"; sourceTree = "<group>"; };
 		AFDFB39104F793C3E5D69A15 /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicScheduler_DynamicSchedulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90A3B3B2394890D00563776 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B90A3B3D23948EA800563776 /* Constraint+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constraint+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		B90A3B3E23948EA800563776 /* Project+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		B90A3B3F23948EA800563776 /* Project+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		B90A3B4023948EA900563776 /* Constraint+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constraint+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		B90A3B4123948EA900563776 /* Task+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		B90A3B4223948EA900563776 /* Task+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		B90A3B4B2394969D00563776 /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
+		B90A3B4D2394A18A00563776 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = DynamicScheduler/TableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		B90A3B4F2394BEB300563776 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		B90A3B512394FA8600563776 /* ProjectTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTasksViewController.swift; sourceTree = "<group>"; };
+		B90A3B53239503A800563776 /* ProjectTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTaskCell.swift; sourceTree = "<group>"; };
+		B90A3B5523950C0A00563776 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		B961D6D52398A79A00694967 /* TempRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempRootViewController.swift; sourceTree = "<group>"; };
+		B961D6D72398C61400694967 /* GenericTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTaskViewController.swift; sourceTree = "<group>"; };
+		B961D6D92398DE0700694967 /* GenericTaskViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTaskViewCell.swift; sourceTree = "<group>"; };
 		C07D31F623885D180087368D /* DynamicScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07D31F923885D180087368D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C07D31FB23885D180087368D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C07D31FD23885D180087368D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C07D320023885D180087368D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C07D320323885D180087368D /* DynamicScheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DynamicScheduler.xcdatamodel; sourceTree = "<group>"; };
 		C07D320523885D180087368D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C07D320823885D180087368D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C07D320A23885D180087368D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +134,12 @@
 		C07D31ED23885D180087368D = {
 			isa = PBXGroup;
 			children = (
+				B90A3B3D23948EA800563776 /* Constraint+CoreDataClass copy.swift */,
+				B90A3B3E23948EA800563776 /* Project+CoreDataProperties copy.swift */,
+				B90A3B3F23948EA800563776 /* Project+CoreDataClass copy.swift */,
+				B90A3B4023948EA900563776 /* Constraint+CoreDataProperties copy.swift */,
+				B90A3B4123948EA900563776 /* Task+CoreDataClass copy.swift */,
+				B90A3B4223948EA900563776 /* Task+CoreDataProperties copy.swift */,
 				C07D31F823885D180087368D /* DynamicScheduler */,
 				C07D321223885D180087368D /* DynamicSchedulerTests */,
 				C07D321D23885D190087368D /* DynamicSchedulerUITests */,
@@ -129,13 +163,21 @@
 			isa = PBXGroup;
 			children = (
 				C07D31F923885D180087368D /* AppDelegate.swift */,
-				C07D31FB23885D180087368D /* SceneDelegate.swift */,
 				C07D31FD23885D180087368D /* ViewController.swift */,
 				C07D31FF23885D180087368D /* Main.storyboard */,
+				B961D6D72398C61400694967 /* GenericTaskViewController.swift */,
+				B961D6D52398A79A00694967 /* TempRootViewController.swift */,
+				B90A3B5523950C0A00563776 /* AddTaskViewController.swift */,
+				B90A3B512394FA8600563776 /* ProjectTasksViewController.swift */,
+				B90A3B4B2394969D00563776 /* ProjectTableViewController.swift */,
+				B90A3B4F2394BEB300563776 /* AddProjectViewController.swift */,
+				B90A3B4D2394A18A00563776 /* TableViewCell.swift */,
+				B90A3B53239503A800563776 /* ProjectTaskCell.swift */,
+				B961D6D92398DE0700694967 /* GenericTaskViewCell.swift */,
 				C07D320523885D180087368D /* Assets.xcassets */,
+				B90A3B3A2394890D00563776 /* Model.xcdatamodeld */,
 				C07D320723885D180087368D /* LaunchScreen.storyboard */,
 				C07D320A23885D180087368D /* Info.plist */,
-				C07D320223885D180087368D /* DynamicScheduler.xcdatamodeld */,
 			);
 			path = DynamicScheduler;
 			sourceTree = "<group>";
@@ -168,7 +210,6 @@
 				2455AD3BCE97D5139D759736 /* Pods-DynamicSchedulerTests.debug.xcconfig */,
 				859CA5D15611529E5281EB28 /* Pods-DynamicSchedulerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -411,10 +452,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B961D6D62398A79A00694967 /* TempRootViewController.swift in Sources */,
+				B961D6DA2398DE0700694967 /* GenericTaskViewCell.swift in Sources */,
+				B961D6D82398C61400694967 /* GenericTaskViewController.swift in Sources */,
+				B90A3B57239519A000563776 /* TableViewCell.swift in Sources */,
+				B90A3B502394BEB300563776 /* AddProjectViewController.swift in Sources */,
+				B90A3B522394FA8600563776 /* ProjectTasksViewController.swift in Sources */,
 				C07D31FE23885D180087368D /* ViewController.swift in Sources */,
-				C07D320423885D180087368D /* DynamicScheduler.xcdatamodeld in Sources */,
 				C07D31FA23885D180087368D /* AppDelegate.swift in Sources */,
-				C07D31FC23885D180087368D /* SceneDelegate.swift in Sources */,
+				B90A3B5623950C0A00563776 /* AddTaskViewController.swift in Sources */,
+				B90A3B4723948EA900563776 /* Task+CoreDataClass copy.swift in Sources */,
+				B90A3B4523948EA900563776 /* Project+CoreDataClass copy.swift in Sources */,
+				B90A3B4323948EA900563776 /* Constraint+CoreDataClass copy.swift in Sources */,
+				B90A3B3C2394890D00563776 /* Model.xcdatamodeld in Sources */,
+				B90A3B54239503A800563776 /* ProjectTaskCell.swift in Sources */,
+				B90A3B4623948EA900563776 /* Constraint+CoreDataProperties copy.swift in Sources */,
+				B90A3B4823948EA900563776 /* Task+CoreDataProperties copy.swift in Sources */,
+				B90A3B4423948EA900563776 /* Project+CoreDataProperties copy.swift in Sources */,
+				B90A3B4C2394969D00563776 /* ProjectTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DynamicScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,6 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DynamicScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -745,13 +802,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C07D320223885D180087368D /* DynamicScheduler.xcdatamodeld */ = {
+		B90A3B3A2394890D00563776 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C07D320323885D180087368D /* DynamicScheduler.xcdatamodel */,
+				B90A3B3B2394890D00563776 /* Model.xcdatamodel */,
 			);
-			currentVersion = C07D320323885D180087368D /* DynamicScheduler.xcdatamodel */;
-			path = DynamicScheduler.xcdatamodeld;
+			currentVersion = B90A3B3B2394890D00563776 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "../../../Desktop/DynamicScheduler-master/DynamicScheduler/Model.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
