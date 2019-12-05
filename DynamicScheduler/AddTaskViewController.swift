@@ -26,9 +26,9 @@ class AddTaskViewController: UIViewController {
         print("project when going to add")
         print(projectHelper.name)
         let task = Task(context: managedObjectContext)
-        task.start_date = startDateField.date as NSDate
+        task.startDate = startDateField.date
         task.estimated_length = Double(estimatedTimeField.text!)!// as! Double
-        task.end_date = endDateField.date as NSDate
+        task.endDate = endDateField.date
         task.user_notes = additionalNotes.text
         
         task.project = projectHelper

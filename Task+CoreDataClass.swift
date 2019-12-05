@@ -1,8 +1,9 @@
 //
 //  Task+CoreDataClass.swift
-//  
+//  DynamicScheduler
 //
-//  Created by Noah Brumfield on 12/1/19.
+//  Created by Cameron Stowell on 12/5/19.
+//  Copyright © 2019 Cameron Stowell. All rights reserved.
 //
 //
 

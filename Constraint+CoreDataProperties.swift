@@ -1,8 +1,9 @@
 //
 //  Constraint+CoreDataProperties.swift
-//  
+//  DynamicScheduler
 //
-//  Created by Noah Brumfield on 12/1/19.
+//  Created by Cameron Stowell on 12/5/19.
+//  Copyright © 2019 Cameron Stowell. All rights reserved.
 //
 //
 
@@ -17,5 +18,23 @@ extension Constraint {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var events: NSSet?
+
+}
+
+// MARK: Generated accessors for events
+extension Constraint {
+
+    @objc(addEventsObject:)
+    @NSManaged public func addToEvents(_ value: EventData)
+
+    @objc(removeEventsObject:)
+    @NSManaged public func removeFromEvents(_ value: EventData)
+
+    @objc(addEvents:)
+    @NSManaged public func addToEvents(_ values: NSSet)
+
+    @objc(removeEvents:)
+    @NSManaged public func removeFromEvents(_ values: NSSet)
 
 }

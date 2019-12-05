@@ -1,5 +1,5 @@
 //
-//  Project+CoreDataClass.swift
+//  EventData+CoreDataClass.swift
 //  DynamicScheduler
 //
 //  Created by Cameron Stowell on 12/5/19.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class Project: NSManagedObject {
+public class EventData: NSManagedObject {
 
 }
