@@ -23,7 +23,7 @@ class CalendarViewController: DayViewController {
         //Build navigation bar with title and buttons
         title = "Dynamic Scheduler"
         let addProjectOrTasksButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToAddTask))
-        let goToTaskListButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: .none)
+        let goToTaskListButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goToProjects))
         //let goToSettingsButton = UIBarButtonItem(barButtonSystemItem: .s, target: <#T##Any?#>, action: <#T##Selector?#>)
         navigationItem.setRightBarButtonItems([addProjectOrTasksButton, goToTaskListButton], animated: false)
         navigationController?.navigationBar.isTranslucent = false
@@ -102,8 +102,13 @@ class CalendarViewController: DayViewController {
         }
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isToolbarHidden = true
+    }
 
     override func eventsForDate(_ date: Date) -> [EventDescriptor] {
+        
         guard container != nil else {
             fatalError("This view needs a persistent container.")
         }
@@ -155,10 +160,23 @@ class CalendarViewController: DayViewController {
     }
     
     @objc func goToAddTask () {
-        let addTaskView = AddTaskViewController();
+        let addTaskView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskView") as! AddTaskViewController
         addTaskView.managedObjectContext = container.viewContext;
-        self.navigationController?.pushViewController(addTaskView, animated: false)
+        self.navigationController?.pushViewController(addTaskView, animated: true)
     }
+    
+    @objc func goToProjects () {
+        let projectsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectsView") as! ViewController
+        projectsView.managedObjectContext = container.viewContext;
+        self.navigationController?.pushViewController(projectsView, animated: true)
+    }
+    
+    override func dayViewDidSelectEventView(_ eventView: EventView) {
+        let taskDetailView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TaskDetailView") as! GenericTaskViewController
+        taskDetailView.managedObjectContext = container.viewContext;
+        self.navigationController?.pushViewController(taskDetailView, animated: true)
+    }
+
 
 }
 

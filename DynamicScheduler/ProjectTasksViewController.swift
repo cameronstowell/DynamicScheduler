@@ -19,10 +19,6 @@ class ProjectTasksViewController: UIViewController, UITableViewDelegate, UITable
     var projectHelper:Project!
     var managedObjectContext:NSManagedObjectContext!
     
-    @IBAction func back(sender: UIBarButtonItem){
-        _ = navigationController?.popViewController(animated: true)
-    }
-    
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Task> = {
         print("Initializing result controller PrjectTasks")
         //Get the project out of the string name first
