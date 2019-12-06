@@ -11,7 +11,7 @@
         <!--Generic Task View Controller-->
         <scene sceneID="wdA-iK-0bH">
             <objects>
-                <viewController id="ewh-f4-0yG" customClass="GenericTaskViewController" customModule="DynamicScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskDetailView" id="ewh-f4-0yG" customClass="GenericTaskViewController" customModule="DynamicScheduler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AU1-Hd-yFA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectsView" id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicScheduler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,7 +268,7 @@
         <!--Add Task View Controller-->
         <scene sceneID="8q8-7c-6BZ">
             <objects>
-                <viewController id="n0x-dR-xEY" customClass="AddTaskViewController" customModule="DynamicScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTaskView" id="n0x-dR-xEY" customClass="AddTaskViewController" customModule="DynamicScheduler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZXx-de-M9W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
