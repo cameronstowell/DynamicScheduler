@@ -11,7 +11,8 @@ import CoreData
 
 class AddProjectViewController: UIViewController {
 
-    @IBOutlet var nameTextField: UITextField! 
+    @IBOutlet var nameTextField: UITextField!
+    var managedObjectContext: NSManagedObjectContext?
     
     @IBAction func save(sender: UIBarButtonItem){
         //Add project to List and Pop to Project List
@@ -29,7 +30,7 @@ class AddProjectViewController: UIViewController {
         print("Should pop here")
         _ = navigationController?.popViewController(animated: false)
     }
-    var managedObjectContext: NSManagedObjectContext?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

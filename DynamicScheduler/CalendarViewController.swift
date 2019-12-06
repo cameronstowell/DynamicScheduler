@@ -22,7 +22,7 @@ class CalendarViewController: DayViewController {
         
         //Build navigation bar with title and buttons
         title = "Dynamic Scheduler"
-        let addProjectOrTasksButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: .none)
+        let addProjectOrTasksButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToAddTask))
         let goToTaskListButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: .none)
         //let goToSettingsButton = UIBarButtonItem(barButtonSystemItem: .s, target: <#T##Any?#>, action: <#T##Selector?#>)
         navigationItem.setRightBarButtonItems([addProjectOrTasksButton, goToTaskListButton], animated: false)
@@ -39,7 +39,7 @@ class CalendarViewController: DayViewController {
             alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Default action"), style: .default, handler: { _ in
             print("Import requested.")
             }))
-            self.present(alert, animated: true, completion: nil)
+            navigationController?.present(alert, animated: true, completion: nil)
         }
         
         
@@ -104,7 +104,11 @@ class CalendarViewController: DayViewController {
     }
 
     override func eventsForDate(_ date: Date) -> [EventDescriptor] {
-        var events = [Event]();
+        guard container != nil else {
+            fatalError("This view needs a persistent container.")
+        }
+        
+        var events = [Event]()
         
         // Get the current calendar with local time zone
         var calendar = Calendar.current
@@ -148,6 +152,12 @@ class CalendarViewController: DayViewController {
         }
         
         return events;
+    }
+    
+    @objc func goToAddTask () {
+        let addTaskView = AddTaskViewController();
+        addTaskView.managedObjectContext = container.viewContext;
+        self.navigationController?.pushViewController(addTaskView, animated: false)
     }
 
 }

@@ -176,9 +176,9 @@
 				C023245923996F7600D84B3F /* SceneDelegate.swift */,
 				C02324732399714C00D84B3F /* AppDelegate.swift */,
 				C07D31FD23885D180087368D /* ViewController.swift */,
-				C07D31FF23885D180087368D /* Main.storyboard */,
 				B961D6D72398C61400694967 /* GenericTaskViewController.swift */,
 				B961D6D52398A79A00694967 /* TempRootViewController.swift */,
+				C07D31FF23885D180087368D /* Main.storyboard */,
 				C023245E2399702D00D84B3F /* CalendarViewController.swift */,
 				B90A3B5523950C0A00563776 /* AddTaskViewController.swift */,
 				B90A3B512394FA8600563776 /* ProjectTasksViewController.swift */,
@@ -661,7 +661,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DynamicScheduler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,7 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DynamicScheduler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
