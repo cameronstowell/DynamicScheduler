@@ -102,8 +102,13 @@ class CalendarViewController: DayViewController {
         }
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isToolbarHidden = true
+    }
 
     override func eventsForDate(_ date: Date) -> [EventDescriptor] {
+        
         guard container != nil else {
             fatalError("This view needs a persistent container.")
         }

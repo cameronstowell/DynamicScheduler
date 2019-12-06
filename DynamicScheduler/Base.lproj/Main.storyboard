@@ -163,15 +163,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="add" id="vy0-SG-93T">
-                            <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                        <barButtonItem systemItem="flexibleSpace" id="vy0-SG-93T"/>
+                        <barButtonItem title="Add" id="70S-9u-KUU">
                             <connections>
-                                <segue destination="gQW-0w-mVq" kind="show" identifier="SegueAddProjectViewController" id="d8b-f4-ZJu"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem title="Back" id="KSH-Ig-wys">
-                            <connections>
-                                <action selector="backWithSender:" destination="BYZ-38-t0r" id="n7V-PB-dO5"/>
+                                <segue destination="gQW-0w-mVq" kind="show" identifier="SegueAddProjectViewController" id="hBf-cb-mHa"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -247,11 +242,6 @@
                         <barButtonItem systemItem="add" id="8An-AE-rvG">
                             <connections>
                                 <segue destination="n0x-dR-xEY" kind="show" identifier="AddTasks" id="JwY-YG-cWc"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem title="Back" id="4Fz-ch-irj">
-                            <connections>
-                                <action selector="backWithSender:" destination="Ebq-eJ-f9m" id="uBN-Vb-ovH"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -344,11 +334,6 @@
                                 <action selector="saveWithSender:" destination="n0x-dR-xEY" id="g13-la-HgZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="Back" id="xrg-Aq-TAt">
-                            <connections>
-                                <action selector="backWithSender:" destination="n0x-dR-xEY" id="Xdu-3j-BDZ"/>
-                            </connections>
-                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -387,12 +372,8 @@
                                 <action selector="saveWithSender:" destination="gQW-0w-mVq" id="d9Z-Ab-w6d"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="Back" id="C9u-uM-MvR">
-                            <connections>
-                                <action selector="backWithSender:" destination="gQW-0w-mVq" id="L8J-fT-bQC"/>
-                            </connections>
-                        </barButtonItem>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" id="K0N-tF-SHH"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nameTextField" destination="VzJ-oL-Rkv" id="2rg-10-jOt"/>

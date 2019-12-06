@@ -25,13 +25,6 @@ class AddProjectViewController: UIViewController {
         _ = navigationController?.popViewController(animated: false)
     }
     
-    @IBAction func back(sender: UIBarButtonItem){
-        //Pop back one controller, to Project List
-        print("Should pop here")
-        _ = navigationController?.popViewController(animated: false)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

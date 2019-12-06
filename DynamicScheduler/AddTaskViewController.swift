@@ -37,10 +37,6 @@ class AddTaskViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func back(sender: UIBarButtonItem){
-        _ = navigationController?.popViewController(animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

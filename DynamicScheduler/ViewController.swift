@@ -13,11 +13,6 @@ extension ViewController:NSFetchedResultsControllerDelegate{}
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
-    @IBAction func back(sender: UIBarButtonItem){
-        //Pop back one controller, to root
-        print("Should pop here")
-        _ = navigationController?.popViewController(animated: false)
-    }
     var managedObjectContext:NSManagedObjectContext!
     var objectToPass:String!
     private let SegueAddProjectViewController = "SegueAddProjectViewController"
@@ -85,8 +80,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     override func viewDidLoad() {
-        print("Loading View View Controller")
         super.viewDidLoad()
+        self.navigationController?.isToolbarHidden = false
         //Navigation Controller pop and push should make this only happen once
         //When alltogether, an object context should probs be pushed here
         //in a segway, rather than made here
