@@ -9,8 +9,8 @@
 import UIKit
 import CoreData
 
-extension ViewController:NSFetchedResultsControllerDelegate{}
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+extension ProjectTableViewController:NSFetchedResultsControllerDelegate{}
+class ProjectTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
     var managedObjectContext:NSManagedObjectContext!

@@ -166,7 +166,7 @@ class CalendarViewController: DayViewController {
     }
     
     @objc func goToProjects () {
-        let projectsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectsView") as! ViewController
+        let projectsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectsView") as! ProjectTableViewController
         projectsView.managedObjectContext = container.viewContext;
         self.navigationController?.pushViewController(projectsView, animated: true)
     }

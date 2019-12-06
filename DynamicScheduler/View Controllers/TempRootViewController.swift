@@ -24,13 +24,13 @@ class TempRootViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "RootToProjects" {
-            if let destinationViewController = segue.destination as? ViewController{
+            if let destinationViewController = segue.destination as? ProjectTableViewController{
                 destinationViewController.managedObjectContext = persistentContainer.viewContext
             }
         }
         if segue.identifier == "RootToGeneric" {
             print("Using Proper Segway")
-            if let destinationViewController = segue.destination as? ViewController{
+            if let destinationViewController = segue.destination as? ProjectTableViewController{
                 destinationViewController.managedObjectContext = persistentContainer.viewContext
             }
         }
