@@ -31,15 +31,8 @@ class CalendarViewController: DayViewController {
         reloadData()
         
         //Alerts user if first time launching app to ask to import their iOS calendar
-        if !(UserDefaults.standard.bool(forKey: "launchedBefore")){
-            let alert = UIAlertController(title: "Import Your iOS Calendar", message: "This is an alert.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("No", comment: "Default action"), style: .default, handler: { _ in
-            print("No calendar import requested")
-            }))
-            alert.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: "Default action"), style: .default, handler: { _ in
-            print("Import requested.")
-            }))
-            navigationController?.present(alert, animated: true, completion: nil)
+        if !(self.hasBeenPromptedForImport()){
+            self.promptForImport()
         }
         
         
@@ -176,7 +169,38 @@ class CalendarViewController: DayViewController {
         taskDetailView.managedObjectContext = container.viewContext;
         self.navigationController?.pushViewController(taskDetailView, animated: true)
     }
-
-
+    
+    //Used to know whether or not to prompt for Calendar Import
+    func hasBeenPromptedForImport()->Bool{
+        let defaults = UserDefaults.standard
+        if let _ = defaults.string(forKey: "hasBeenPromptedForImport"){
+            print("App already launched")
+            return true
+        }else{
+            defaults.set(true, forKey: "hasBeenPromptedForImport")
+            print("Prompting for import first time")
+            return false
+        }
+    }
+    
+    //Creates alert that starts calendar import when "Yes" is selected
+    func promptForImport(){
+        let alert = UIAlertController(title: "Import Your iOS Calendar", message: "Fill that calendar up!", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "No", style: .default) {
+            UIAlertAction in
+            print("No calendar import requested")
+            })
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default) {
+            UIAlertAction in
+            print("Import requested.")
+            let importer = CalendarImporter(container: self.container)
+            importer.importCalendar()
+            self.reloadData()
+        })
+        
+        navigationController?.present(alert, animated: true, completion: nil)
+    }
 }
 
