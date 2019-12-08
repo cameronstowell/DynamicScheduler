@@ -28,6 +28,7 @@ class CalendarImporter {
 
         let eventStore = EKEventStore()
         let calendars = eventStore.calendars(for: .event)
+        
         //Pulls events within the surrounding month from Classes calendar
         for calendar in calendars {
             print("here")
@@ -59,6 +60,7 @@ class CalendarImporter {
 
     }
     
+    //Prompts user for access to their calendar and sets hasAccess to reflect the app's current access level
     func requestCalendarAccess() {
         let eventStore = EKEventStore()
         switch EKEventStore.authorizationStatus(for: .event){
