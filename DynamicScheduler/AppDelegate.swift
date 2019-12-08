@@ -14,6 +14,8 @@ import CalendarKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
 
     var window : UIWindow?
+    let userDefaults = UserDefaults.standard
+    var promptForCalendarImport = true;
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window?.backgroundColor = UIColor.white
@@ -23,7 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
         dayViewController.container = persistentContainer
         let navigationController = UINavigationController(rootViewController: dayViewController)
         window?.rootViewController = navigationController
+        
         return true
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        self.saveContext()
     }
 
     // MARK: UISceneSession Lifecycle
