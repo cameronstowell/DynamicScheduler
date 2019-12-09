@@ -30,6 +30,7 @@
 		C02324742399714C00D84B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324732399714C00D84B3F /* AppDelegate.swift */; };
 		C02324802399759900D84B3F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C023247E2399759900D84B3F /* Model.xcdatamodeld */; };
 		C03EBB73239DB879008C80F4 /* TaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBB72239DB879008C80F4 /* TaskScheduler.swift */; };
+		C03EBB75239EEBFE008C80F4 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C03EBB74239EEBFE008C80F4 /* readme.md */; };
 		C068767B239B1C6B00BAA21F /* CalendarImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068767A239B1C6B00BAA21F /* CalendarImporter.swift */; };
 		C07D31FE23885D180087368D /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31FD23885D180087368D /* ProjectTableViewController.swift */; };
 		C07D320123885D180087368D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07D31FF23885D180087368D /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		C02324732399714C00D84B3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C023247F2399759900D84B3F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C03EBB72239DB879008C80F4 /* TaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScheduler.swift; sourceTree = "<group>"; };
+		C03EBB74239EEBFE008C80F4 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		C068767A239B1C6B00BAA21F /* CalendarImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarImporter.swift; sourceTree = "<group>"; };
 		C07D31F623885D180087368D /* DynamicScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07D31FD23885D180087368D /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		C07D31ED23885D180087368D = {
 			isa = PBXGroup;
 			children = (
+				C03EBB74239EEBFE008C80F4 /* readme.md */,
 				C02324632399709600D84B3F /* Project+CoreDataClass.swift */,
 				C02324642399709600D84B3F /* Project+CoreDataProperties.swift */,
 				C02324652399709600D84B3F /* EventData+CoreDataClass.swift */,
@@ -347,6 +350,7 @@
 			files = (
 				C07D320923885D180087368D /* LaunchScreen.storyboard in Resources */,
 				C07D320623885D180087368D /* Assets.xcassets in Resources */,
+				C03EBB75239EEBFE008C80F4 /* readme.md in Resources */,
 				C07D320123885D180087368D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
