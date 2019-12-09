@@ -361,6 +361,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="attentionSpanTextField" destination="lwu-dt-0Es" id="8HP-z9-rVB"/>
                         <outlet property="dueDateTextField" destination="62i-gp-Jw5" id="Fbx-Go-Scf"/>
                         <outlet property="estimatedTimeField" destination="wTn-yg-GLK" id="d62-Hr-S7d"/>
                         <outlet property="nameTextField" destination="q2K-xI-9nd" id="S6t-ye-P15"/>

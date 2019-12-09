@@ -21,20 +21,26 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var estimatedTimeField: UITextField!
     @IBOutlet weak var dueDateTextField: UITextField!
     @IBOutlet weak var notesTextView: UITextView!
+    @IBOutlet weak var attentionSpanTextField: UITextField!
     
     @IBAction func save(sender: UIBarButtonItem){
         guard let managedObjectContext = managedObjectContext else { return }
         let task = Task(context: managedObjectContext)
-        //TODO: fix start date and due date
-        //task.startDate = startDateTextField?.text as Date
-        //task.endDate = endDateField.date
+        task.startDate = timeFormatter.date(from:startDateTextField!.text!)!
+        task.dueDate = timeFormatter.date(from:dueDateTextField!.text!)!
         task.user_notes = notesTextView.attributedText.string
-        task.estimated_length = Double(estimatedTimeField.text!)!// as! Double
-       
+        task.estimated_length = Double(estimatedTimeField.text!)!
+        task.attentionSpan = Double(attentionSpanTextField.text!)!
         task.project = projectHelper
-        task.name = nameTextField.text
+        task.name = nameTextField.text!
+        
+        let scheduler = TaskScheduler(task: task, managedObjectContext: managedObjectContext)
+        if(!scheduler.schedule()){
+            //ALERT -- NOT ENOUGH TIME TO COMPLETE TASK
+        }
         
         _ = navigationController?.popViewController(animated: true)
+        //managedObjectContext.save()
     }
     
     //When users touch down on the startDateTextField, it opens a DatePicker that can be used to select the date. When the user is finished entering their date, the DatePicker disappears.

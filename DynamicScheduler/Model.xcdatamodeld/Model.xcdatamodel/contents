@@ -16,7 +16,8 @@
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="project" inverseEntity="Task"/>
     </entity>
     <entity name="Task" representedClassName=".Task" syncable="YES">
-        <attribute name="endDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="attentionSpan" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dueDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="estimated_length" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
@@ -28,6 +29,6 @@
         <element name="Constraint" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="EventData" positionX="-45" positionY="63" width="128" height="118"/>
         <element name="Project" positionX="-54" positionY="0" width="128" height="73"/>
-        <element name="Task" positionX="-36" positionY="18" width="128" height="148"/>
+        <element name="Task" positionX="-36" positionY="18" width="128" height="163"/>
     </elements>
 </model>
