@@ -29,6 +29,7 @@
 		C02324722399709600D84B3F /* Constraint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023246A2399709600D84B3F /* Constraint+CoreDataProperties.swift */; };
 		C02324742399714C00D84B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02324732399714C00D84B3F /* AppDelegate.swift */; };
 		C02324802399759900D84B3F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C023247E2399759900D84B3F /* Model.xcdatamodeld */; };
+		C03EBB73239DB879008C80F4 /* TaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03EBB72239DB879008C80F4 /* TaskScheduler.swift */; };
 		C068767B239B1C6B00BAA21F /* CalendarImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C068767A239B1C6B00BAA21F /* CalendarImporter.swift */; };
 		C07D31FE23885D180087368D /* ProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D31FD23885D180087368D /* ProjectTableViewController.swift */; };
 		C07D320123885D180087368D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07D31FF23885D180087368D /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		C023246A2399709600D84B3F /* Constraint+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C02324732399714C00D84B3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C023247F2399759900D84B3F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C03EBB72239DB879008C80F4 /* TaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScheduler.swift; sourceTree = "<group>"; };
 		C068767A239B1C6B00BAA21F /* CalendarImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarImporter.swift; sourceTree = "<group>"; };
 		C07D31F623885D180087368D /* DynamicScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07D31FD23885D180087368D /* ProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTableViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				C07D320723885D180087368D /* LaunchScreen.storyboard */,
 				C07D320A23885D180087368D /* Info.plist */,
 				C068767A239B1C6B00BAA21F /* CalendarImporter.swift */,
+				C03EBB72239DB879008C80F4 /* TaskScheduler.swift */,
 			);
 			path = DynamicScheduler;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				B90A3B522394FA8600563776 /* ProjectTasksViewController.swift in Sources */,
 				C023246F2399709600D84B3F /* Task+CoreDataClass.swift in Sources */,
 				C07D31FE23885D180087368D /* ProjectTableViewController.swift in Sources */,
+				C03EBB73239DB879008C80F4 /* TaskScheduler.swift in Sources */,
 				C023246E2399709600D84B3F /* EventData+CoreDataProperties.swift in Sources */,
 				C023246B2399709600D84B3F /* Project+CoreDataClass.swift in Sources */,
 				C023246C2399709600D84B3F /* Project+CoreDataProperties.swift in Sources */,
