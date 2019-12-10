@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Noah/Documents/DynamicScheduler/DynamicScheduler/View Controllers/TaskDetailViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:DynamicScheduler.xcodeproj">
    </FileRef>
    <FileRef

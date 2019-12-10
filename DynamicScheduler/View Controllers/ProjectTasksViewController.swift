@@ -12,7 +12,7 @@ import CoreData
 extension ProjectTasksViewController: NSFetchedResultsControllerDelegate {}
 
 class ProjectTasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    var taskNameHelper:String!
     var currentProject:String = ""
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var projectLabel:UILabel!
@@ -55,6 +55,50 @@ class ProjectTasksViewController: UIViewController, UITableViewDelegate, UITable
     }()
     
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        print("how bout now")
+        if segue.identifier == "AddTasks"{
+            if let destinationViewController = segue.destination as? AddTaskViewController{
+                destinationViewController.managedObjectContext = managedObjectContext
+                destinationViewController.projectHelper = projectHelper
+                
+            }
+        }
+        if segue.identifier == "TaskToDetails"{
+            //print("Just not taskDetailViewController")
+            if let destinationViewController = segue.destination as? TaskDetailViewController {
+            //print("Should be here")
+            //print("Should DEFINITELY be here")
+            destinationViewController.managedObjectContext = managedObjectContext
+            //print(objectToPass)
+            //print("just printed")
+            destinationViewController.objectToPass = taskNameHelper
+         
+            }
+            
+        }
+        
+    }
+    
+     override func viewDidLoad() {
+           print("Before super view did load?")
+           super.viewDidLoad()
+           print("Just before Label")
+           projectLabel.text = currentProject
+           print("Just before Perform Fetch")
+           
+           //self.fetchedResultsController.deleteCacheWithName;:nil
+           do {
+               try self.fetchedResultsController.performFetch()
+           } catch{
+               let fetchError = error as NSError
+               print("Unable to perform fetch request")
+               print("\(fetchError), \(fetchError.localizedDescription)")
+           }
+           // Do any additional setup after loading the view.
+       }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let tasks = fetchedResultsController.fetchedObjects else { return 0 }
         return tasks.count
@@ -70,6 +114,14 @@ class ProjectTasksViewController: UIViewController, UITableViewDelegate, UITable
         cell.nameLabel.text = task.name
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let currentCell = tableView.cellForRow(at: indexPath) as? ProjectTaskCell
+        
+        
+        taskNameHelper = currentCell?.nameLabel.text
+        print(taskNameHelper!)
+        self.performSegue(withIdentifier: "TaskToDetails", sender: self)
     }
     
     func controllerWillChangeContent(_ controller:NSFetchedResultsController<NSFetchRequestResult>){
@@ -94,36 +146,7 @@ class ProjectTasksViewController: UIViewController, UITableViewDelegate, UITable
             
             print("Project Tasks Fetch Change Unknown Type")
         }
-    }
-    override func viewDidLoad() {
-        print("Before super view did load?")
-        super.viewDidLoad()
-        print("Just before Label")
-        projectLabel.text = currentProject
-        print("Just before Perform Fetch")
-        
-        //self.fetchedResultsController.deleteCacheWithName;:nil
-        do {
-            try self.fetchedResultsController.performFetch()
-        } catch{
-            let fetchError = error as NSError
-            print("Unable to perform fetch request")
-            print("\(fetchError), \(fetchError.localizedDescription)")
-        }
-        // Do any additional setup after loading the view.
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "AddTasks"{
-            if let destinationViewController = segue.destination as? AddTaskViewController{
-                destinationViewController.managedObjectContext = managedObjectContext
-                destinationViewController.projectHelper = projectHelper
-                
-            }
-        }
-        
-    }
-
-    /*
+    }    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

@@ -12,12 +12,18 @@ import CoreData
 extension ProjectTableViewController:NSFetchedResultsControllerDelegate{}
 class ProjectTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    
+    @IBAction func openAlert(sender: UIBarButtonItem){
+        //Add project to List and Pop to Project List
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBOutlet var tableView: UITableView!
     var managedObjectContext:NSManagedObjectContext!
     var objectToPass:String!
     private let SegueAddProjectViewController = "SegueAddProjectViewController"
-
-    /*var projects = [Project](){
+    var alert:UIAlertController!    /*var projects = [Project](){
         didSet {
             updateView()
         }
@@ -71,7 +77,9 @@ class ProjectTableViewController: UIViewController, UITableViewDelegate, UITable
             }
         }
         if segue.identifier == "ProjectsToTasks" {
-            if let destinationViewController = segue.destination as? ProjectTasksViewController {
+            if let destinationViewController = segue.destination as?
+                ProjectTasksViewController {
+                print("PERForming this segue")
                 destinationViewController.managedObjectContext = managedObjectContext
                 
                 destinationViewController.currentProject = objectToPass
@@ -92,6 +100,23 @@ class ProjectTableViewController: UIViewController, UITableViewDelegate, UITable
             print("Unable to perform fetch request")
             print("\(fetchError), \(fetchError.localizedDescription)")
         }
+        alert = UIAlertController(title: "AddProjectAlert", message: "Enter a Project Name", preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            textField.text = "Default Text"
+            
+        }
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert!.textFields![0]
+            print("Text field: \(textField.text)")
+            
+            let project = Project(context: self.managedObjectContext)
+            
+            project.name = textField.text
+            
+            
+            
+        }))
     // Do any additional setup after loading the view.
     }
     func numberOfSections(in tableView: UITableView) -> Int {

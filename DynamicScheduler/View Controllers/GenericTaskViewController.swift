@@ -13,7 +13,7 @@ extension GenericTaskViewController: NSFetchedResultsControllerDelegate {}
 class GenericTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    
+    var genericNameHelper:String!
     @IBOutlet var tableView: UITableView!
     @IBAction func back(sender: UIBarButtonItem){
         //Pop back one controller, to root
@@ -93,7 +93,15 @@ class GenericTaskViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let currentCell = tableView.cellForRow(at: indexPath) as? GenericTaskViewCell
+        
+        
+        genericNameHelper = currentCell?.nameLabel.text
+        print(genericNameHelper!)
+        self.performSegue(withIdentifier: "GenericToDetails", sender: self)
+    }
+
     override func viewDidLoad() {
         print("Do i even make it here?")
         super.viewDidLoad()
@@ -107,8 +115,23 @@ class GenericTaskViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
     }
     
-
-    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        //print("how bout now")
+        if segue.identifier == "GenericToDetails"{
+            //print("Just not taskDetailViewController")
+            if let destinationViewController = segue.destination as? TaskDetailViewController {
+            //print("Should be here")
+            //print("Should DEFINITELY be here")
+            destinationViewController.managedObjectContext = managedObjectContext
+            //print(objectToPass)
+            //print("just printed")
+            destinationViewController.objectToPass = genericNameHelper
+         
+            }
+            
+        }
+        
+    }    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

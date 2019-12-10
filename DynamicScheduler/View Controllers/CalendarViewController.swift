@@ -24,11 +24,11 @@ class CalendarViewController: DayViewController {
         title = "Dynamic Scheduler"
         let addProjectOrTasksButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToAddTask))
         let goToTaskListButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goToProjects))
-        
+        let genericTaskButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToGenericTask))
         //currently not needed for prototype, button for stats/settings
         //let goToSettingsButton = UIBarButtonItem(barButtonSystemItem: .s, target: <#T##Any?#>, action: <#T##Selector?#>)
         
-        navigationItem.setRightBarButtonItems([addProjectOrTasksButton, goToTaskListButton], animated: false)
+        navigationItem.setRightBarButtonItems([addProjectOrTasksButton, goToTaskListButton, genericTaskButton], animated: false)
         navigationController?.navigationBar.isTranslucent = false
         dayView.autoScrollToFirstEvent = true
         reloadData()
@@ -106,6 +106,12 @@ class CalendarViewController: DayViewController {
         let projectsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProjectsView") as! ProjectTableViewController
         projectsView.managedObjectContext = container.viewContext;
         self.navigationController?.pushViewController(projectsView, animated: true)
+    }
+    
+    @objc func goToGenericTask () {
+        let genericTaskView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GenericView") as! GenericTaskViewController
+        genericTaskView.managedObjectContext = container.viewContext;
+        self.navigationController?.pushViewController(genericTaskView, animated: true)
     }
     
     //TODO: Make selecting event bring you to task details page for that event
