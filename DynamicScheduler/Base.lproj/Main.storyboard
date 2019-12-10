@@ -239,7 +239,8 @@
                         <viewLayoutGuide key="safeArea" id="Kci-XD-G1y"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="add" id="8An-AE-rvG">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="jJS-UG-9u0"/>
+                        <barButtonItem title="Add" id="8An-AE-rvG">
                             <connections>
                                 <segue destination="n0x-dR-xEY" kind="show" identifier="AddTasks" id="JwY-YG-cWc"/>
                             </connections>
@@ -353,6 +354,7 @@
                         <viewLayoutGuide key="safeArea" id="IC1-7U-Rvf"/>
                     </view>
                     <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8sk-uB-bhu"/>
                         <barButtonItem systemItem="save" id="G2T-Zj-Unj">
                             <connections>
                                 <action selector="saveWithSender:" destination="n0x-dR-xEY" id="g13-la-HgZ"/>
