@@ -14,11 +14,11 @@ For our prototype delivered as the final project, the Initial Set-up has become 
 
 Programmatically builds the buttons for the view&#39;s navigation bar, and prompts the user to import their calendar if they have not yet been asked.
 
-#### eventsForDate(\_ date: Date) -\&gt; [EventDescriptor]
+#### eventsForDate(\_ date: Date)->[EventDescriptor]
 
 A delegate function from the **DayViewController** in **CalendarKit** , implemented to fetch all **EventData** objects from Core Data with dates matching the argument passed to the function and returns them as a set of **EventDescriptor** , which is the proprietary object structure **CalendarKit** uses to interface with its calendar.
 
-#### hasBeenPromptedForImport()-\&gt;Bool
+#### hasBeenPromptedForImport()->Bool
 
 Keeps track of a variable in **UserDefaults** that denotes whether or not the user has been prompted for imported before. If they have not been prompted, then we can assume they are about to be, and the variable is set to true.
 
@@ -70,9 +70,9 @@ Tasks are the pieces of work that make up a project. When entered, they require 
 
 **TaskScheduler** is a class that is initialized with a reference to a **Task** from our Core Data model and the **NSManagedObjectContext** that our Core Data session is using.
 
-#### schedule()-\&gt;Bool
+#### schedule()->Bool
 
-Attempts to schedule enough events to work on completing the task before it&#39;s due date. If not possible by the current algorithm, the function returns false. The algorithm fetches all **EventData** objects from Core Data on dates that the task can be worked on and looks for enough free time between existing events to work on the task. The algorithm prioritizes getting work down as soon as possible.
+Attempts to schedule enough events to work on completing the task before its due date. If not possible by the current algorithm, the function returns false. The algorithm fetches all **EventData** objects from Core Data on dates that the task can be worked on and looks for enough free time between existing events to work on the task. The algorithm prioritizes getting work down as soon as possible.
 
 ## CalendarImporter
 
