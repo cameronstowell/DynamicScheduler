@@ -13,7 +13,6 @@ extension ProjectTableViewController:NSFetchedResultsControllerDelegate{}
 class ProjectTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    
     @IBAction func openAlert(sender: UIBarButtonItem){
         //Add project to List and Pop to Project List
         self.present(alert, animated: true, completion: nil)
@@ -71,11 +70,6 @@ class ProjectTableViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == SegueAddProjectViewController {
-            if let destinationViewController = segue.destination as? AddProjectViewController{
-                destinationViewController.managedObjectContext = managedObjectContext
-            }
-        }
         if segue.identifier == "ProjectsToTasks" {
             if let destinationViewController = segue.destination as?
                 ProjectTasksViewController {
@@ -100,22 +94,15 @@ class ProjectTableViewController: UIViewController, UITableViewDelegate, UITable
             print("Unable to perform fetch request")
             print("\(fetchError), \(fetchError.localizedDescription)")
         }
-        alert = UIAlertController(title: "AddProjectAlert", message: "Enter a Project Name", preferredStyle: .alert)
+        alert = UIAlertController(title: "New Project", message: "", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
-            textField.text = "Default Text"
-            
+            textField.placeholder = "Project name"
         }
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert!.textFields![0]
-            print("Text field: \(textField.text)")
-            
             let project = Project(context: self.managedObjectContext)
-            
             project.name = textField.text
-            
-            
-            
         }))
     // Do any additional setup after loading the view.
     }

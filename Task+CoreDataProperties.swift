@@ -18,6 +18,7 @@ extension Task {
     }
 
     @NSManaged public var dueDate: Date
+    @NSManaged public var earliestTime: Date
     @NSManaged public var attentionSpan: Double
     @NSManaged public var estimated_length: Double
     @NSManaged public var name: String

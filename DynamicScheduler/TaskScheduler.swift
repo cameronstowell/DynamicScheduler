@@ -27,7 +27,7 @@ class TaskScheduler {
         
         var currDay = task.startDate
         let dueDate = task.dueDate
-        var earliestTime = Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: currDay)
+        var earliestTime = Calendar.current.date(bySettingHour: task.earliestTime.component(.hour), minute: task.earliestTime.component(.minute), second: 0, of: currDay)
         
         while(numOfEventsToSchedule >= 0){
             if(currDay >= dueDate){
@@ -45,22 +45,31 @@ class TaskScheduler {
             
             do {
                 let result = try managedObjectContext.fetch(request)
-                
                 var currTime = earliestTime!
+                
+                //Free day! schedule as early as possible
+                if(result.isEmpty){
+                    buildEvent(currTime: currTime)
+                    numOfEventsToSchedule -= 1
+                    break
+                }
+                
                 for data in result as! [EventData] {
                     if (data.startDate.hours(from: currTime) > Int(task.attentionSpan)){
-                        let event = NSEntityDescription.insertNewObject(forEntityName: "EventData", into: managedObjectContext) as! EventData
-                        event.startDate = currTime
-                        event.endDate = Calendar.current.date(byAdding: .hour, value: Int(task.attentionSpan), to: currTime)!
-                        event.text = task.name
-                        task.addToEvents(event)
-                        print(currTime)
+                        buildEvent(currTime: currTime)
                         numOfEventsToSchedule -= 1
                         break
                     } else {
-                        //lets add an hour too
                         currTime = data.endDate
                     }
+                }
+                
+                //out of events, check how much free time until midnight
+                let midnight = Calendar.current.startOfDay(for: Calendar.current.date(byAdding: .day, value: 1, to: currDay)!)
+                if (midnight.hoursLater(than: currTime) >= Int(task.attentionSpan)){
+                    buildEvent(currTime: currTime)
+                    numOfEventsToSchedule -= 1
+                    break
                 }
                 
             } catch {
@@ -74,5 +83,13 @@ class TaskScheduler {
         
         
         return true
+    }
+    
+    func buildEvent(currTime : Date){
+        let event = NSEntityDescription.insertNewObject(forEntityName: "EventData", into: managedObjectContext) as! EventData
+        event.startDate = currTime
+        event.endDate = Calendar.current.date(byAdding: .hour, value: Int(task.attentionSpan), to: currTime)!
+        event.text = task.name
+        task.addToEvents(event)
     }
 }

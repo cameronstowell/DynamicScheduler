@@ -10,12 +10,10 @@
 		2E3816DE3429FB2C28B9DFBE /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDFB39104F793C3E5D69A15 /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework */; };
 		4195BBE34EF6669AD36A2367 /* Pods_DynamicScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46C885B614AFB8798DA6870 /* Pods_DynamicScheduler.framework */; };
 		4FCACA52239F91910099D3BC /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCACA51239F91900099D3BC /* TaskDetailViewController.swift */; };
-		B90A3B502394BEB300563776 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4F2394BEB300563776 /* AddProjectViewController.swift */; };
 		B90A3B522394FA8600563776 /* ProjectTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B512394FA8600563776 /* ProjectTasksViewController.swift */; };
 		B90A3B54239503A800563776 /* ProjectTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B53239503A800563776 /* ProjectTaskCell.swift */; };
 		B90A3B5623950C0A00563776 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B5523950C0A00563776 /* AddTaskViewController.swift */; };
 		B90A3B57239519A000563776 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90A3B4D2394A18A00563776 /* TableViewCell.swift */; };
-		B961D6D62398A79A00694967 /* TempRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961D6D52398A79A00694967 /* TempRootViewController.swift */; };
 		B961D6D82398C61400694967 /* GenericTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961D6D72398C61400694967 /* GenericTaskViewController.swift */; };
 		B961D6DA2398DE0700694967 /* GenericTaskViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961D6D92398DE0700694967 /* GenericTaskViewCell.swift */; };
 		C023245A23996F7600D84B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C023245923996F7600D84B3F /* SceneDelegate.swift */; };
@@ -62,7 +60,7 @@
 /* Begin PBXFileReference section */
 		2455AD3BCE97D5139D759736 /* Pods-DynamicSchedulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicSchedulerTests.debug.xcconfig"; path = "Target Support Files/Pods-DynamicSchedulerTests/Pods-DynamicSchedulerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29841AD19FA04C9021B8CBA2 /* Pods-DynamicScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicScheduler.debug.xcconfig"; path = "Target Support Files/Pods-DynamicScheduler/Pods-DynamicScheduler.debug.xcconfig"; sourceTree = "<group>"; };
-		4FCACA51239F91900099D3BC /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskDetailViewController.swift; path = "/Users/Noah/Documents/DynamicScheduler/DynamicScheduler/View Controllers/TaskDetailViewController.swift"; sourceTree = "<absolute>"; };
+		4FCACA51239F91900099D3BC /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskDetailViewController.swift; path = "DynamicScheduler/View Controllers/TaskDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
 		6D305F22DCA7104955656C9E /* Pods-DynamicScheduler-DynamicSchedulerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicScheduler-DynamicSchedulerUITests.release.xcconfig"; path = "Target Support Files/Pods-DynamicScheduler-DynamicSchedulerUITests/Pods-DynamicScheduler-DynamicSchedulerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6EE4B1F7CBE0E03703399749 /* Pods_DynamicSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicSchedulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		735E351BC7453413AEC3844B /* Pods-DynamicScheduler-DynamicSchedulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicScheduler-DynamicSchedulerUITests.debug.xcconfig"; path = "Target Support Files/Pods-DynamicScheduler-DynamicSchedulerUITests/Pods-DynamicScheduler-DynamicSchedulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,11 +68,9 @@
 		8CFB9C0EFF41E46387845083 /* Pods-DynamicScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicScheduler.release.xcconfig"; path = "Target Support Files/Pods-DynamicScheduler/Pods-DynamicScheduler.release.xcconfig"; sourceTree = "<group>"; };
 		AFDFB39104F793C3E5D69A15 /* Pods_DynamicScheduler_DynamicSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DynamicScheduler_DynamicSchedulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90A3B4D2394A18A00563776 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = DynamicScheduler/TableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		B90A3B4F2394BEB300563776 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
 		B90A3B512394FA8600563776 /* ProjectTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTasksViewController.swift; sourceTree = "<group>"; };
 		B90A3B53239503A800563776 /* ProjectTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTaskCell.swift; sourceTree = "<group>"; };
 		B90A3B5523950C0A00563776 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		B961D6D52398A79A00694967 /* TempRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempRootViewController.swift; sourceTree = "<group>"; };
 		B961D6D72398C61400694967 /* GenericTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTaskViewController.swift; sourceTree = "<group>"; };
 		B961D6D92398DE0700694967 /* GenericTaskViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTaskViewCell.swift; sourceTree = "<group>"; };
 		C023245923996F7600D84B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,10 +148,8 @@
 				C023245E2399702D00D84B3F /* CalendarViewController.swift */,
 				B90A3B5523950C0A00563776 /* AddTaskViewController.swift */,
 				B90A3B512394FA8600563776 /* ProjectTasksViewController.swift */,
-				B90A3B4F2394BEB300563776 /* AddProjectViewController.swift */,
 				C07D31FD23885D180087368D /* ProjectTableViewController.swift */,
 				B961D6D72398C61400694967 /* GenericTaskViewController.swift */,
-				B961D6D52398A79A00694967 /* TempRootViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -487,14 +481,12 @@
 				C023245F2399702E00D84B3F /* CalendarViewController.swift in Sources */,
 				C023246D2399709600D84B3F /* EventData+CoreDataClass.swift in Sources */,
 				C02324722399709600D84B3F /* Constraint+CoreDataProperties.swift in Sources */,
-				B961D6D62398A79A00694967 /* TempRootViewController.swift in Sources */,
 				C02324712399709600D84B3F /* Constraint+CoreDataClass.swift in Sources */,
 				4FCACA52239F91910099D3BC /* TaskDetailViewController.swift in Sources */,
 				B961D6DA2398DE0700694967 /* GenericTaskViewCell.swift in Sources */,
 				B961D6D82398C61400694967 /* GenericTaskViewController.swift in Sources */,
 				B90A3B57239519A000563776 /* TableViewCell.swift in Sources */,
 				C02324802399759900D84B3F /* Model.xcdatamodeld in Sources */,
-				B90A3B502394BEB300563776 /* AddProjectViewController.swift in Sources */,
 				C068767B239B1C6B00BAA21F /* CalendarImporter.swift in Sources */,
 				B90A3B522394FA8600563776 /* ProjectTasksViewController.swift in Sources */,
 				C023246F2399709600D84B3F /* Task+CoreDataClass.swift in Sources */,

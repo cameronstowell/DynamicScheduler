@@ -36,7 +36,6 @@ class ProjectTasksViewController: UIViewController, UITableViewDelegate, UITable
         //There shoudlnt be, may want to prevent people from trying
         projectHelper = fetchedProject[0]
         
-        print(projectHelper.name)
         let fetchRequest:NSFetchRequest<Task> = Task.fetchRequest()
         //print("Task Fetch request is set")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
@@ -146,14 +145,5 @@ class ProjectTasksViewController: UIViewController, UITableViewDelegate, UITable
             
             print("Project Tasks Fetch Change Unknown Type")
         }
-    }    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    } 
 }

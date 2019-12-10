@@ -22,13 +22,13 @@ class CalendarViewController: DayViewController {
         
         //Build navigation bar with title and buttons
         title = "Dynamic Scheduler"
-        let addProjectOrTasksButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToAddTask))
-        let goToTaskListButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goToProjects))
+        let goToProjectListButton = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(goToProjects))
         let genericTaskButton = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(goToGenericTask))
         //currently not needed for prototype, button for stats/settings
         //let goToSettingsButton = UIBarButtonItem(barButtonSystemItem: .s, target: <#T##Any?#>, action: <#T##Selector?#>)
         
-        navigationItem.setRightBarButtonItems([addProjectOrTasksButton, goToTaskListButton, genericTaskButton], animated: false)
+        navigationItem.setLeftBarButton(genericTaskButton, animated: false)
+        navigationItem.setRightBarButton(goToProjectListButton, animated: false)
         navigationController?.navigationBar.isTranslucent = false
         dayView.autoScrollToFirstEvent = true
         reloadData()
@@ -94,12 +94,6 @@ class CalendarViewController: DayViewController {
         }
         
         return events;
-    }
-    
-    @objc func goToAddTask () {
-        let addTaskView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddTaskView") as! AddTaskViewController
-        addTaskView.managedObjectContext = container.viewContext;
-        self.navigationController?.pushViewController(addTaskView, animated: true)
     }
     
     @objc func goToProjects () {

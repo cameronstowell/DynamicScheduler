@@ -53,7 +53,8 @@ class TaskDetailViewController: UIViewController {
         }
         
         taskHelper = fetchedTask[0]
-        //Now that we have the task, use its values to set the outlets        EditProjectName.text = taskHelper.project?.name
+        //Now that we have the task, use its values to set the outlets
+        EditProjectName.text = taskHelper.project?.name
         EditTaskName.text = taskHelper.name
         EditStartDate.text = timeFormatter.string(from: taskHelper.startDate)
         EditDueDate.text = timeFormatter.string(from :taskHelper.dueDate)
