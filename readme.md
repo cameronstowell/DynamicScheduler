@@ -1,5 +1,7 @@
 # Dynamic Scheduler
 
+by Cameron Stowell and Noah Brumfield
+
 # Views
 
 ## Initial Set-up (CalendarImporterView)
