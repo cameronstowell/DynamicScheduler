@@ -42,6 +42,8 @@ class TaskScheduler {
             let datePredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [fromPredicate, toPredicate])
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "EventData")
             request.predicate = datePredicate
+            let sort = NSSortDescriptor(key: #keyPath(EventData.startDate), ascending: true)
+            request.sortDescriptors = [sort]
             
             do {
                 let result = try managedObjectContext.fetch(request)
@@ -60,7 +62,7 @@ class TaskScheduler {
                         numOfEventsToSchedule -= 1
                         break
                     } else {
-                        currTime = data.endDate
+                        currTime = Calendar.current.date(byAdding: .minute, value: 15, to: data.endDate)!
                     }
                 }
                 

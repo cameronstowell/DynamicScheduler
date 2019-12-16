@@ -1,5 +1,35 @@
 # Dynamic Scheduler
 
+By Cameron Stowell and Noah Brumfield
+
+![logo](./readme_pics/logo.png)
+![calendar view](./readme_pics/cview.PNG)
+
+
+# Overview
+
+Dynamic Scheduler is a Swift app that allows a user to import their existing iOS calendar and schedule your upcoming work. By giving the app the constraints you want to work under, it will schedule time in your calendar for you to work on each task and get it done on time. 
+
+This project uses [CalendarKit](https://github.com/richardtop/CalendarKit)
+
+# Instructions
+
+## To build
+
+Clone the repo and build in XCode using the old build system. The project should be configured correctly with CocoaPods already. This project uses the "CalendarKit" pod and its dependencies.
+
+## To use
+
+1. The prompt for a calendar input will only show up on a fresh install. NOTE: It will only import a calendar named "Classes". This can be changed by hardcoding a different calendar name into the **importCalendar()** function in **CalendarImporter**.
+
+2. The top-right button on the CalendarView will bring you to the Projects view. From here, you can add a new Project by name.
+
+3. Tap your project's name to go a to a list of it's task. Here you can add a new task.
+
+4. Give your task a name, start/due date, and estimated length, how long you can stand to work on it in one sitting, the earliest time in the day you are willing to work on it, and any additional notes. 
+
+5. Hit add and go look at the calendar! Your task has been scheduled. If there isn't enough time to complete the task, it will not let you save it. 
+
 # Views
 
 ## Initial Set-up (CalendarImporterView)
@@ -85,3 +115,4 @@ If the app has permission to access the user&#39;s calendar, this function pulls
 #### requestCalendarAccess()
 
 Called by **importCalendar()**, performs the system calls needed to request permission from the user to access their calendar.
+
