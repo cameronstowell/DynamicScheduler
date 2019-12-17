@@ -125,7 +125,7 @@ Called by **importCalendar()**, performs the system calls needed to request perm
 
 ## Noah
 * Every other view
-* Segues
+* Navigation between views
 * UI
 
 ## Cameron/Noah
@@ -133,5 +133,5 @@ Called by **importCalendar()**, performs the system calls needed to request perm
 * AddTaskView
 * Documentation
 
-
+# Possible Future Features
 
