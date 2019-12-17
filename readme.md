@@ -116,3 +116,22 @@ If the app has permission to access the user&#39;s calendar, this function pulls
 
 Called by **importCalendar()**, performs the system calls needed to request permission from the user to access their calendar.
 
+# Who Did What?
+
+## Cameron
+* CalendarView
+* Scheduling
+* UX tweaks
+
+## Noah
+* Every other view
+* Segues
+* UI
+
+## Cameron/Noah
+* CoreDate integration
+* AddTaskView
+* Documentation
+
+
+
