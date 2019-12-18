@@ -2,8 +2,9 @@
 
 By Cameron Stowell and Noah Brumfield
 
-![logo](./readme_pics/logo.png)
-![calendar view](./readme_pics/cview.PNG)
+<img src="./readme_pics/logo.png" alt="logo" width="150"/>
+
+<img src="./readme_pics/cview.PNG" alt="app" width="200"/>
 
 
 # Overview
