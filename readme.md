@@ -2,10 +2,15 @@
 
 By Cameron Stowell and Noah Brumfield
 
+
+<div class="row">
+<div class="column">
 <img src="./readme_pics/logo.png" alt="logo" width="150"/>
-
+</div>
+<div class="column">
 <img src="./readme_pics/cview.PNG" alt="app" width="200"/>
-
+</div>
+</div>
 
 # Overview
 
