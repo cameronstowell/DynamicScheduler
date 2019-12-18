@@ -135,4 +135,9 @@ Called by **importCalendar()**, performs the system calls needed to request perm
 * Documentation
 
 # Possible Future Features
+* An initial set-up view that allows users for more choice in what calendars they import, and support for Google calendar
+* Detailed statistics on the amount of work performed over a period of time
+* Suggestions for length of future work based of past work statistics
+* A UI overhaul to make the app prettier
+* More robust constraint that allows for more than "Start/Due date", "Attention Span", and "Earliest Time"
 
